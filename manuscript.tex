@@ -87,16 +87,8 @@ Uncertainty is ubiquitous in science and this uncertainty takes many forms, but 
 \setlength{\epigraphwidth}{0.4\textwidth} % return to default for the next epigraphs
 %\nocite{Laplace18291902} %[p. 196]
 
-\EJ{I have doubts about the ``Trust me, I'm a Bayesian'' part of the title, also because ``Trust'' now occurs twice. Maybe simply ``Building Trust in Science Through a Bayesian Perspective on Probability and Uncertainty''?}
-\MK{Ok with the new title - I liked the sound of the trust me thing but utlimatley it may not be really on point!}
-\EJ{I also uploaded my bibtex file, ``referenties.bib''. I could not get it to work, but you could copy the relevant references into your own bibtex file. Actually, I also managed to make the initial bibtex setup not work, and I have absolutely no clue as to how this happened.}
-
 Uncertainty is ubiquitous in science and this uncertainty takes many forms. For example, measurement uncertainty is present when there are differences (small or large) in the repeated measures of the same object or phenomenon \parencite{pls03} or when the object that is measured, like a plant, is inherently variable in its characteristics \parencite{pls03}. Another form of uncertainty is its role within explanatory theories, such as those associated with evolution and quantum physics, for which central models take the form of probablistic statements, i.e., uncertainty is a core constituent of these models \parencite{g00}. 
 
-\EJ{Yeah so as a hard-nosed determinist I still have an issue with ``inherent'' uncertainty. If we don't sort this out we could resolve it through a footnote (e.g., ``EJ Wagenmakers would like to note that he is a determinist who believes that the concepts of probability and uncertainty belongs wholly to the mind \parencite{Jevons18741913}, with the possible exception of the strange world of quantum mechanics.''} 
-\MK{I got rid of the inherent part.}
-
-\EJ{It would be good to go over the reference list in detail; in particular, I noticed several ``bayes'' that should be ``Bayes'' (the B needs to be enclosed in brackets so it displays in upper case)}
 Negotiating these many forms of uncertainty in argumentation—and building toward consensus at the same time that uncertainty is present—is a key part of the scientific process \parencite{t00}. In consequence, some philosophers of science have suggested that science is a process that builds increasingly better models which allows us to make increasingly more accurate predictions about the world  \parencite{g10, g06, n02, r77}.
 
 However, while scientists and philosophers of science may be aware of the uncertainty (and limitations) surrounding scientific knowledge and negotiating standards of evidence interpretation, scientific knowledge is still often portrayed as immutable in educational contexts \parencite{d90}. In consequence, trust in science can erode when scientists individually or collectively change their views, such as during the first phase of the COVID-19 crisis in Germany, when scientists faced serious criticism from politicians and the media for changing their opinion based on new information. A similar tension was present in the United States and around the world regarding potential COVID-19 medication, when initial scientific data and changing interpretations of its utility collided with citizens’ skepticism (and, partisan political views).
@@ -105,7 +97,7 @@ Adding to this problem around the limited recognition of the tentative nature of
 
 Based on accumulating evidence from cognitive psychology, neuroscience, and education, we build on and extend beyond the science and engineering practice of argumentation the foundational work of science educational \parencite{n11, s07} and statistics education scholars \parencite{a02, b02, h_a20, h_j20,me14, s07} to argue for a \EJ{I'd say ``underused'', because Bayes itself is pretty old and now pretty hip} approach to uncertainty and probability that is currently underrepresented in science education (research). Specifically, we argue that it is helpful to consider uncertainty in terms of a Bayesian epistemological framework to help people to understand uncertainty and probability better and to engage with them in a way that leverages their existing ways of thinking. Central to this conceptualization is viewing uncertainty probabilistically, as probabilities can provide a language for expressing the degree of uncertainty in our knowledge in a wide range of domains \parencite{g12}. In this way, we make this conjecture not only on the merits of Bayes' Theorem as a mathematical or statistical tool, but based on a body of psychological and educational research that shows that such an approach is an intuitive way for people to think about data and evidence in the world \parencite{g12} and in classroom contexts \parencite{ll20, n11, s07, so12, w17}.
 
-The remainder of this paper is structured in the following way. We will first briefly introduce Bayes theorem and wider ideas around Bayesian epistemology. Next, we will elaborate on the importance of probability and uncertainty in science (education) and review how people learn about these concepts and where they face difficulties. Then, we will provide examples of how Bayes could help to address these issues before concluding with implications and directions for future research.
+The remainder of this paper is structured as follows. First, we will introduce Bayes theorem and wider ideas around Bayesian epistemology. Next, we will elaborate on the importance of probability and uncertainty in science (education) and review how people learn about these concepts and where they face difficulties. Then, we will provide examples of how Bayes could help to address these issues before concluding with implications and directions for future research.
 
 \section{Primer on Bayes Theorem and Bayesian Views of Epistemology}
 
@@ -120,7 +112,11 @@ Mathematically, this can be expressed as
 \end{equation}
 where $\theta$ is a hypothesis, proposition, claim, parameter value, or in general any particular account of the world about which we are uncertain. The predictive updating factor consists of two components. First, $p(\text{data} \given \theta)$ is the likelihood, that is, the extent to which the observed data were expected under $\theta$. Second, $p(\text{data})$ is the marginal likelihood, that is, the extent to which the observed data were expected without conditioning on $\theta$. If the observed data are more expected (i.e., better predicted) when conditioning on $\theta$, the predictive updating factor is higher than 1, and $\theta$ becomes more credible. 
 
-To make this more tangible, consider the following example. Suppose you are interested in the proportion of students that use Windows vs. MacOS as their operating system. The proportion of Windows users $\theta$ ranges between 0 and 1. Before you start our Bayesian analysis, you need to quantify your background knowledge -- the relative plausibility of the different values for $\theta$. Given your previous experiences in class rooms your best guess is that about half of the students use MacOS. You would not be surprised if the  proportion of Windows users was between 30\% and 70\% but you would be rather surprised to find either no Windows or exclusive Windows usage. This background knowledge motivates the use of the dome-shaped prior distribution shown as the dashed line in Figure~\ref{fig:WindowsMacPriorPosterior}.\footnote{This is the beta$(2,2)$ distribution.} Now suppose you start to collect data by asking students about their operating systems. The first ten observations of Windows (W) and MacOS (M) usage that you make are $\{W, W, M, W, M, W, W, M, W, M\}$: six students use Windows, four use MacOS. With these data in hand, we then combine our prior knowledge (i.e., the dome-shaped prior distribution) with the predictive updating factor (assuming a binomial likelihood) and obtain the posterior distribution shown as the solid line in Figure~\ref{fig:WindowsMacPriorPosterior}. The posterior distribution is more peaked than the prior distribution, indicating that the data have sharpened our knowledge about $\theta$. In addition, the posterior distribution is higher than the prior distribution for values of $\theta$ between approximately $.4$ and $.75$: these values of $\theta$ predicted the data relatively well and have therefore gained credibility. In contrast, values of $\theta$ lower than $.4$ and higher than $.75$ predicted the data relatively poorly, which is why they have lost credibility compared to the prior.\footnote{Note that the area under a probability distribution equals 1, so that posterior gains for specific regions of $\theta$ cancel out exactly against posterior losses for the other regions.}  
+To make this more tangible, consider the following example. Suppose an educator is interested in the proportion of students that use Windows or MacOS as their operating system. The proportion of Windows users $\theta$ ranges between 0 and 1. Before you start our Bayesian analysis, you need to quantify your background knowledge -- the relative plausibility of the different values for $\theta$. Given their previous experiences as a teacher, their best guess is that about half of the students use MacOS. They would not be surprised if the proportion of Windows users was between 30\% and 70\% but you would be rather surprised to find either no Windows or exclusive Windows usage. 
+
+This background knowledge motivates the use of the dome-shaped prior distribution shown as the dashed line in Figure~\ref{fig:WindowsMacPriorPosterior}.\footnote{This is the beta$(2,2)$ distribution.} Now suppose you start to collect data by asking students about their operating systems. The first ten observations of Windows (W) and MacOS (M) usage that you make are $\{W, W, M, W, M, W, W, M, W, M\}$: six students use Windows, four use MacOS. 
+
+With these data in hand, we then combine our prior knowledge (i.e., the dome-shaped prior distribution) with the predictive updating factor (assuming a binomial likelihood) and obtain the posterior distribution shown as the solid line in Figure~\ref{fig:WindowsMacPriorPosterior}. The posterior distribution is more peaked than the prior distribution, indicating that the data have sharpened our knowledge about $\theta$. In addition, the posterior distribution is higher than the prior distribution for values of $\theta$ between approximately $.4$ and $.75$: these values of $\theta$ predicted the data relatively well and have therefore gained credibility. In contrast, values of $\theta$ lower than $.4$ and higher than $.75$ predicted the data relatively poorly, which is why they have lost credibility compared to the prior.\footnote{Note that the area under a probability distribution equals 1, so that posterior gains for specific regions of $\theta$ cancel out exactly against posterior losses for the other regions.}  
 
 \begin{figure*}[h]
 \begin{center}
@@ -140,7 +136,7 @@ Although we have demonstrated this updating process in a single step, it could a
 \end{center}
 \end{figure*}
 
-But how do the principles from this example translate to science (education)? A recent case from physics can serve to illustrate this. In 2011, physicists reported that they had observed elementary particles moving faster than the speed of light \parencite{b11} - and thus defying Einstein’s theory of relativity. However, instead of celebrating a historic discovery, the scientists started to look for what had gone wrong in their observations. 
+How do the principles from this example translate to students' work with data and evidence -- not only educators? A recent case from physics can serve to illustrate this approach in the context of students' activity in science classrooms. In 2011, physicists reported that they had observed elementary particles moving faster than the speed of light \parencite{b11} - and thus defying Einstein’s theory of relativity. However, instead of celebrating a historic discovery, the scientists started to look for what had gone wrong in their observations. 
 
 How can Bayes’ theorem help to make sense of this? With nearly a century of accumulated evidence that the theory of relativity holds, scientists had a very strong prior belief about the speed of light. To change this belief, extraordinary evidence would have been required. Thus, a single instance of apparently faster-than light elementary particles does not give a likelihood strong enough to change the prior in a meaningful way and in consequence the posterior, the knowledge about the world after making an observation, does not change in a meaningful way. 
 
@@ -206,10 +202,7 @@ How should we consider evidence about the vaccines? Prior to any data from medic
 
 What is the result of this entire process of weighting new evidence in light of a generic prior that we discussed above? We argue that there are three ways that Bayesian methods could support science literacy. 
 
-\JR{may cut these depending on what E.J. adds below}
-\EJ{OK I added a bunch of stuff. Feel free to ignore, cut, rewrite, integrate with other materials etc. Here is where my stuff starts...}
-
-The famous French astronomer and mathematician Pierre-Simon Laplace argued that Bayes' rule quantifies how rational observers ought to change their opinion in light of new evidence; in this sense, Laplace believed that Bayes' rule was \emph{common sense expressed in numbers}. We now showcase several insights that follow directly from Bayes' rule. In our earlier exposition of Bayes' rule we already emphasized the idea that hypotheses gain credibility when they predict the data well, and lose credibility when they predict new data poorly \parencite{WagenmakersEtAl2016CD}. This idea generalizes what the mathematician George Polya termed the ``Fundamental Inductive Pattern'':
+The famous French astronomer and mathematician Laplace argued that Bayes' rule quantifies how rational observers ought to change their opinion in light of new evidence; in this sense, Laplace believed that Bayes' rule was \emph{common sense expressed in numbers}. We now showcase several insights that follow directly from Bayes' rule. In our earlier exposition of Bayes' rule we already emphasized the idea that hypotheses gain credibility when they predict the data well, and lose credibility when they predict new data poorly \parencite{WagenmakersEtAl2016CD}. This idea generalizes what the mathematician Polya termed the ``Fundamental Inductive Pattern'':
 \begin{quotation}
 ``This inductive pattern says nothing surprising. On the contrary, it expresses a belief which no reasonable person seems to doubt: \emph{The verification of a consequence renders a conjecture more credible}. With a little attention, we can observe countless reasonings in everyday life, in the law courts, in science, etc., which appear to confirm to our pattern.'' \parencite[pp. 4-5]{Polya1954Vol2}
 \end{quotation}
@@ -263,26 +256,8 @@ Finally, we can also write Bayes' rule as follows:
 \end{split}
 \end{equation}
 This equation shows that the posterior plausibility is dictated by the predictive performance for $\mathcal{H}_1$ and $\mathcal{H}_0$, weighted by the prior plausibility of each hypothesis. In other words, ``The Bayesian world is a comparative world in which there are no absolutes.'' \parencite[p. 308]{Lindley2000}. This is in stark contrast to $p$-value statistical hypothesis testing, in which a statistical model (the null hypothesis) is judged in isolation. 
-\EJ{...and here it ends.}
 
-First, the result is a non-binary inference, one that doesn't speak to whether or not the vaccine is safe, but to what degree it is safe, doing so with a language of probability and uncertainty. Though a small difference, discussing the safety of vaccines on these terms can provide a more solid foundation for principled disagreements and arguments.
-
-Second, Bayes provides a heuristic and a language for engaging with uncertainty in a science literacy context in a principled way that is in-line with how most of us likely already interpret data. Specifically Bayes provides people with a way to talk about weighing between ideas and their prior beliefs and new information and data. In short, Bayes gives people a chance to deal with uncertainty in a principled but accessible way.
-
-Last, his process could be formalized mathematically.
-
-%I think there are several very general ideas that could be illustrated with Bayes’ rule. These include:
-
-%\begin{enumerate}
-%    \item When we gain new information, our updated knowledge of the world is a compromise between our old knowledge and the new information.
-%    \item Today’s posterior is tomorrow’s prior 
-%    \item Hypotheses/claims that predict new data well receive a boost in credibility, whereas those that predict the data poorly suffer a decline.
-%    \item All knowledge is relative
-%    \item Avoid absolute beliefs (Cromwell’s rule; these are not amenable to learning)
-%    \item Surprise lost is credibility gained
-%    \item Polya’s fundamental inductive pattern: ``This inductive pattern says nothing surprising. On the contrary, it expresses a belief which no reasonable person seems to doubt: The verification of a consequence renders a conjecture more credible. With a little attention, we can observe countless reasonings in everyday life, in the law courts, in science, etc., which appear to confirm to our pattern.'' (Polya, 1954, pp. 4-5)
-%    \item Extraordinary claims require extraordinary evidence
-%\end{enumerate}
+Thus, in summary, the result of applying Bayes rule is a non-binary inference, one that doesn't speak to whether or not the vaccine is safe, but to what degree it is safe, doing so with a language of probability and uncertainty. Though a small difference, discussing the safety of vaccines on these terms can provide a more solid foundation for principled disagreements and arguments. In addition, Bayes provides a heuristic and a language for engaging with uncertainty in a science literacy context in a principled way that is in-line with how most of us likely already interpret data. Specifically Bayes provides people with a way to talk about weighing between ideas and their prior beliefs and new information and data. In short, Bayes gives people a chance to deal with uncertainty in a principled but accessible way.
 
 \section{Bayes and Science Education}
 
@@ -321,11 +296,6 @@ In this paper, we have introduced Bayes as a powerful way of conceptualizing pro
 We have outlined numerous vantage points for research agendas to explore the potential of Bayes in science education so that future research can identify how students can become better reasoners in light of uncertainty. We have also discussed how we as scientists and science educators can contribute to the public trust in science by becoming better in how we communicate about probability and uncertainty. In all, Bayes is a big idea—one with epistemological and philosophical, statistical, and pedagogical implications. We argue that the time for advancing Bayesian methods has come, particularly in light of distrust in science and science education and the way Bayesian methods can address this state of affairs by offering a different foundation and language around a core but sometimes unsettling tenet and persistent feature, uncertainty. 
 
 \printbibliography
-
-\appendix
-
-\section{code}
-add JASP links/code/etc.?
 
 \end{document}
 
